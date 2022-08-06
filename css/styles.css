@@ -238,10 +238,10 @@
   .articles__card {
     width: 100%;
     margin: auto;
-    padding: 1rem 3rem 0 3rem;
+    padding: 1rem 2rem 0 2rem;
   }
   .articles__small-box {
-    width: 100%;
+    width: 90%;
   }
   .articles__small-box--gray {
     background: rgb(33, 37, 41);
