@@ -7,10 +7,11 @@
 }
 .header {
   background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: saturate(180%) blur(20px);
   height: 3em;
-  position: fixed;
+  position: sticky;
   top: 0;
-  width: 100%;
+  /* width: 100%; */
   z-index: 1;
 }
 .nav {
@@ -41,10 +42,14 @@
 .nav__link {
   color: gray;
 }
+.nav__link:hover {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
 /* HEADLINE SITE-HEADER */
 .headline {
   margin: 1em;
-  margin-top: 4rem;
   height: 31.6em;
   background: rgb(248, 249, 250);
   display: flex;
@@ -161,6 +166,7 @@
   background: rgb(248, 249, 250);
   margin-left: auto;
   margin-right: auto;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.075);
 }
 .articles__small-box--gray {
   background: rgb(33, 37, 41);
@@ -191,4 +197,89 @@
   color: #848b92;
   font: 1rem;
   line-height: 1.5rem;
+  transition: 0.3s;
+}
+.footer__link:hover {
+  color: rgba(66, 65, 65, 0.767);
+}
+/* MOBILE */
+@media screen and (max-width: 576px) {
+  /* HEADER MEDIA */
+  .nav__link {
+    display: none;
+  }
+  .nav__links {
+    justify-content: center;
+  }
+  /* HEADLINE MEDIA */
+  .headline {
+    height: 22rem;
+    margin: 0;
+  }
+  .headline__cell-phone {
+    display: none;
+  }
+  .headline__screen {
+    display: none;
+  }
+  .headline__title {
+    font-size: 2.1rem;
+    margin-top: 1.5em;
+  }
+  .headline__description {
+    margin: 0;
+    width: 100%;
+    padding: 1em;
+  }
+  /* ARTICLES MEDIA */
+  .articles__title {
+    font-size: 2rem;
+  }
+  .articles__card {
+    width: 100%;
+    margin: auto;
+    padding: 1rem 3rem 0 3rem;
+  }
+  .articles__small-box {
+    width: 100%;
+  }
+  .articles__small-box--gray {
+    background: rgb(33, 37, 41);
+  }
+  .articles__small-box--white {
+    background: white;
+  }
+  /* FOOTER MEDIA */
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 1em 4.5rem 1em;
+    justify-content: center;
+  }
+  .footer__links {
+    list-style: none;
+    width: 50%;
+  }
+  .footer__links--first-list {
+    width: 100%;
+    display: block;
+  }
+  .footer__title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 2.5rem;
+  }
+  .footer__paragraph {
+    font-size: 0.9rem;
+    color: #848b92;
+  }
+  .footer__link {
+    color: #848b92;
+    font: 1rem;
+    line-height: 1.5rem;
+    transition: 0.3s;
+  }
+  .footer__link:hover {
+    color: rgba(66, 65, 65, 0.767);
+  }
 }
